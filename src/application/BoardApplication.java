@@ -11,7 +11,10 @@ public class BoardApplication {
 	    * 목록에서는 조회, 등록, 종료
 	    * 상세화면에서는 수정, 삭제, 목록
 	 */
-	
+	public static void init() {
+		System.out.println("=============[자유 게시판]=============");
+		System.out.println("")
+	}
 	
 		
 	public static void main(String[] args) {
