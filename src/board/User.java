@@ -6,12 +6,13 @@ public class User {
 	private int userId;
 	private String nickName;
 	private Post post;
-	private ArrayList<Post> postList = new ArrayList<Post>();
+
 	private ArrayList<Comment> commentList = new ArrayList<Comment>();
 	
-	public User(int userId, String nickName) {
+	public User(int userId, String nickName, Post post) {
 		this.userId = userId;
 		this.nickName = nickName;
+		this.post = post;
 	}
 
 	public int getUserId() {
@@ -36,14 +37,6 @@ public class User {
 
 	public void setPost(Post post) {
 		this.post = post;
-	}
-
-	public ArrayList<Post> getPostList() {
-		return postList;
-	}
-
-	public void setPostList(ArrayList<Post> postList) {
-		this.postList = postList;
 	}
 
 	public ArrayList<Comment> getCommentList() {

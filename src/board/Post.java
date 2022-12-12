@@ -4,13 +4,18 @@ import java.util.ArrayList;
 
 public class Post {
 	
-	private int postId;
 	private String postTitle;
-	private ArrayList<Comment> commentList = new ArrayList<Comment>(); 
+	private int postId;
+	private ArrayList<User> userList = new ArrayList<User>();
+	 
 	
 	public Post(int postId, String postTitle) {
 		this.postId = postId;
 		this.postTitle = postTitle;
+	}
+	
+	public void write(User user) {
+		userList.add(user);
 	}
 
 	public int getPostId() {
@@ -28,16 +33,6 @@ public class Post {
 	public void setPostTitle(String postTitle) {
 		this.postTitle = postTitle;
 	}
-
-	public ArrayList<Comment> getCommentList() {
-		return commentList;
-	}
-
-	public void setCommentList(ArrayList<Comment> commentList) {
-		this.commentList = commentList;
-	}
-	
-	
 
 
 }

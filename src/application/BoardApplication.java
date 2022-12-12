@@ -1,6 +1,10 @@
 package application;
 
+import board.User;
+
 public class BoardApplication {
+//	Post post
+	
 	
 	/*
 	    * ArrayList와 HashMap을 사용해 게시판 테이블을 만들고,
@@ -13,11 +17,12 @@ public class BoardApplication {
 	 */
 	public static void init() {
 		System.out.println("=============[자유 게시판]=============");
-		System.out.println("")
+		System.out.println("");
 	}
 	
 		
 	public static void main(String[] args) {
 		System.out.println("\t자유 게시판");
 	}
+	
 }
