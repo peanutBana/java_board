@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class Post {
 	
-	private String postTitle;
-	private int postId;
-	private ArrayList<User> userList = new ArrayList<User>();
-	 
+	private String postTitle;	//게시글 제목
+	private String content;
+	private int postId;			//게시글 아이디
+	private User user;			//게시글 작성자
+	private ArrayList<Comment> commentList = new ArrayList<Comment>();		// 게시글에 남긴 댓글 목록
 	
-	public Post(int postId, String postTitle) {
+	public Post() {}
+	
+	public Post(int postId, String postTitle) {		//글 id, 작성자
 		this.postId = postId;
 		this.postTitle = postTitle;
 	}
 	
-	public void write(User user) {
-		userList.add(user);
-	}
 
 	public int getPostId() {
 		return postId;
@@ -34,5 +34,29 @@ public class Post {
 		this.postTitle = postTitle;
 	}
 
+	public User getUser() {
+		return user;
+	}
 
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public String getContent() {
+		return content;
+	}
+	
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public ArrayList<Comment> getCommentList() {
+		return commentList;
+	}
+
+	public void setCommentList(ArrayList<Comment> commentList) {
+		this.commentList = commentList;
+	}
+	
+	
 }

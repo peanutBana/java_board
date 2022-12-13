@@ -8,6 +8,7 @@ public class Board {
 	
 	private ArrayList<User> userList = new ArrayList<User>();
 	private ArrayList<Post> postList = new ArrayList<Post>();
+	private ArrayList<Comment> commentList = new ArrayList<Comment>();
 	
 	private Board() {}
 	
