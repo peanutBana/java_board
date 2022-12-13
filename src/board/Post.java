@@ -1,23 +1,27 @@
 package board;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Post {
 	
 	private String postTitle;	//게시글 제목
-	private String content;
+	private String content;		//게시글 내용
 	private int postId;			//게시글 아이디
 	private User user;			//게시글 작성자
+	private Date postTime = new Date();
+	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
 	private ArrayList<Comment> commentList = new ArrayList<Comment>();		// 게시글에 남긴 댓글 목록
 	
 	public Post() {}
 	
-	public Post(int postId, String postTitle) {		//글 id, 작성자
+	public Post(int postId, String postTitle, String content) {		//글 id, 작성자
 		this.postId = postId;
+		this.content = content;
 		this.postTitle = postTitle;
 	}
 	
-
 	public int getPostId() {
 		return postId;
 	}

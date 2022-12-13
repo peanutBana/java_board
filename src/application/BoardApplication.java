@@ -1,6 +1,10 @@
 package application;
 
+import java.util.HashMap;
 import java.util.Scanner;
+
+import board.Post;
+import board.User;
 
 /*
  * ArrayList와 HashMap을 사용해 게시판 테이블을 만들고,
@@ -16,20 +20,35 @@ public class BoardApplication {
 	
 	static boolean status = true;
 	static Scanner sc = new Scanner(System.in);
-	
-	public static void login() {
-		System.out.println("=============[자유 게시판]=============");
-		System.out.println("==========로그인==========");
-		System.out.println("=    Id: ");
-		int id = sc.nextInt();
-		System.out.print("=    Pw: ");
-		int pw = sc.nextInt();
-		System.out.println("========================");
+	static HashMap<Post, User> postList = new HashMap<Post, User>();
+
+	public void showAllPost(){
+		
 	}
+	
+	public void createPost(){}
+	
+	public void modifyPost(){}
+	
+	public void deletePost(){}
+	
+	public void logout(){}
 	
 		
 	public static void main(String[] args) {
-		login();
+		
+		Post p1 = new Post();
+		Post p2 = new Post();
+		Post p3 = new Post();
+		
+		User u1 = new User();
+		User u2 = new User();
+		User u3 = new User();
+		
+		postList.put(p1,u1);
+		postList.put(p2,u2);
+		postList.put(p3,u3);
+		
 		int choice;
 		 while(status) {
 			 System.out.println("1.게시글 목록 | 2.게시글 작성 | 3.게시글 수정 | 4.게시글 삭제 | 5.로그아웃 | 6.종료");
@@ -39,7 +58,7 @@ public class BoardApplication {
 				 //showAllPost();
 				 break;
 			 case 2:
-				 //cratePost();
+				 //createPost();
 				 break;
 			 case 3:
 				 //modifyPost();

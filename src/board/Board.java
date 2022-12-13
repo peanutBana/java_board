@@ -43,6 +43,14 @@ public class Board {
 	public void setPostList(ArrayList<Post> postList) {
 		this.postList = postList;
 	}
+
+	public ArrayList<Comment> getCommentList() {
+		return commentList;
+	}
+
+	public void setCommentList(ArrayList<Comment> commentList) {
+		this.commentList = commentList;
+	}
 	
 	
 	
